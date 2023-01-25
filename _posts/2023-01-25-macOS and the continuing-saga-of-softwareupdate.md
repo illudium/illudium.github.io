@@ -1,0 +1,25 @@
+## macOS and the continuing saga of softwareupdate (software update) being "frozen" or not working, no updates listed
+
+There is a well-known issue with macOS in which a Mac (since the time of macOS Big Sur - aka "macOS 11") does not show an vailable software update.
+
+---
+
+### Investigating further
+If you look at the running processes, you may see an existing ```softwareudpated``` process listed, which might have been active for some time.
+
+Manually launching Software Update (in the GUI) or using the ```softwareudpate``` command, will simply sit without returning anything about available updates.
+
+#### Remdiation
+
+To get past this, I have found the following helpful and the steps do not require a reboot:
+
+Run the following via the Terminal (or remotely via ssh):
+```sudo /bin/launchctl disable system/com.apple.softwareupdated```
+ # wait several seconds
+```sudo /bin/launchctl enable system/com.apple.softwareupdated```
+# wait several seconds. Note, the following should be (technically spekaing) redundant and unnecessary, but think of it as one more "kick" to help get things working again:
+```sudo /bin/launchctl kickstart -k system/com.apple.softwareupdated```
+
+And - hopefully - you'll find the problem resolved, as I have so far.
+
+#### Originally published by me, March 17th, 2022
