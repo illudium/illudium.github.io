@@ -16,7 +16,7 @@ To get past this, I have found the following helpful and the steps do not requir
 Run the following via the Terminal (or remotely via ssh):
 ```sudo /bin/launchctl disable system/com.apple.softwareupdated```
 
-Then wwait several seconds, and run:
+Then wait several seconds, and run:
 ```sudo /bin/launchctl enable system/com.apple.softwareupdated```
 
 Wait several more seconds. Note, the following should be (technically speaking) redundant and unnecessary, but think of it as one more "kick" to help get things working again:
