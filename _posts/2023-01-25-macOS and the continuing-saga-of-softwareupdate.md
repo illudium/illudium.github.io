@@ -19,7 +19,7 @@ Run the following via the Terminal (or remotely via ssh):
 Then wwait several seconds, and run:
 ```sudo /bin/launchctl enable system/com.apple.softwareupdated```
 
-Wait several more seconds. Note, the following should be (technically spekaing) redundant and unnecessary, but think of it as one more "kick" to help get things working again:
+Wait several more seconds. Note, the following should be (technically speaking) redundant and unnecessary, but think of it as one more "kick" to help get things working again:
 
 ```sudo /bin/launchctl kickstart -k system/com.apple.softwareupdated```
 
