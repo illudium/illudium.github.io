@@ -17,13 +17,13 @@ Optionally, you can add a dialog stating that a refresh is happening.
 
 The AppleScript content is below:
 
-```try
-``` tell application "Finder" to update items of front window
-```end try
+try
+ tell application "Finder" to update items of front window
+ end try
 
 And with a dialog:
 
-```try
-``` tell application "Finder" to update items of front window
-``` display dialog "Refreshing the Finder" default button "OK" giving up after 1
-```end try
+try
+ tell application "Finder" to update items of front window
+ display dialog "Refreshing the Finder" default button "OK" giving up after 1
+end try
