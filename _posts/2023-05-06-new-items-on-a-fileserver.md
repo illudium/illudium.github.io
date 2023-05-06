@@ -25,7 +25,8 @@ end try
 
 And with a dialog:
 
-```applescripttry
+```applescript
+try
  tell application "Finder" to update items of front window
  display dialog "Refreshing the Finder" default button "OK" giving up after 1
 end try
