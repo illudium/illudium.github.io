@@ -3,6 +3,7 @@
 A common occurrence with clients/users on Macs working with a fileserver (network shares)
 is that when someone else adds new items (files, folders) to network (server-based) sharepoint/folder/drive, 
 other Mac users don't see those new items, they appear to be missing or "hidden," but they're not.
+
 (This is actually a longstanding issue with macOS and the Finder).
 
 --
