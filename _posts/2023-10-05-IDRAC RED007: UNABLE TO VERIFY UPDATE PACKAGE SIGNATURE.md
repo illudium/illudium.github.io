@@ -13,7 +13,8 @@ idrac RED007: Unable to verify Update Package signature
 ### Remediation
 
 This is most probably due to the existing iDRAC setup lacking required information about newer security (certificate) information for the much newer update installer.
-A confirmed fix is to apply earlier updates to/for the iDRAC in a more step-wise manner:
+
+**A confirmed fix** is to apply earlier updates to/for the iDRAC in a more step-wise manner:
 For example, if the card is listed at version 2.3x.(etc), apply the update to 2.40.40.40 then 2.5x, etc. up the latest update. It is often possible to skip one version, but as always, proceed with due care & caution.
 
 #### Originally published by me, January 29, 2019
