@@ -1,6 +1,7 @@
 ## IDRAC RED007: UNABLE TO VERIFY UPDATE PACKAGE SIGNATURE
 
 Dell servers provide an iDRAC ("Integrated Dell Remote Access Controller") card for remote management of the unit. Note that this feature is a default (with some limited functionality in the "express" version) in Dell's most entry-level tower server options.
+
 There are a number of options for managing updates for Dell servers, including direct access to an iDRAC card, which is configured with a specifed network configuration during initial setup of a/the server in question. Of course, please observe standard best-practices and never provide public accessibility to any such device, keep it behind your perimeter firewall where it (the iDRAC interface) can only be accessed via VPN.
 Once configured the iDRAC card is readily accessible at its assigned IP address, via a web-browser.
 
