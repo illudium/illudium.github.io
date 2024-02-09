@@ -1,9 +1,8 @@
 ## macOS and advanced network commands for managing DNS settings
 
 While MDM is unequivocally a must for managing macOS at (really any) scale, there are times when a scripted approach can still be needed.
----
 
-### Commands for determining the active network interface and working with DNS server settings
+### Commands for determining the active network interface and working with DNS server settings:
 
 There are a couple different ways we can go about this:
 
@@ -30,11 +29,9 @@ will fail:
 /usr/sbin/networksetup -getdnsservers "serviceName"
 ```
 
-Will come back with: "There aren't any DNS Servers set on <interface name>"
+Will come back with: "There aren't any DNS Servers set on \<serviceName\>"
 
-Which is hardly useful.
-
-So we can proceed with
+Which is hardly useful ! So, we can proceed with the following:
 
 ```shell
 $currDNS=$(/usr/sbin/networksetup -getdnsservers "serviceName")
