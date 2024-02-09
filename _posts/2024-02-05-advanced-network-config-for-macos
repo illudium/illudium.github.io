@@ -2,7 +2,6 @@
 
 While MDM is unequivocally a must for managing macOS at (really any) scale, there are times when a scripted approach can still be needed.
 ---
-
 ### Commands for determining the active network interface and working with DNS server settings
 
 There are a couple different ways we can go about this:
