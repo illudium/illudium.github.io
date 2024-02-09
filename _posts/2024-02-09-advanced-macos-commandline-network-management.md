@@ -33,6 +33,7 @@ Will come back with: "There aren't any DNS Servers set on \<serviceName\>"
 
 Which is hardly useful ! So, we can proceed with the following:
 
+For utility and extra [tech-type fun, let's use an array !](https://www.google.com/search?q=shell+scripting+using+an+array) 
 ```shell
 declare currDNS=($(/usr/sbin/networksetup -getdnsservers "serviceName"))
 
