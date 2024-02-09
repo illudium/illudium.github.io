@@ -4,7 +4,7 @@ While MDM is unequivocally a must for managing macOS at (really any) scale, ther
 
 ### Commands for determining the active network interface and working with DNS server settings:
 
-There are a couple different ways we can go about this:
+When we want to programmatically determine the existing primary network interface ID, name and existing DNS servers, there are a few different ways we can go about this:
 
 ```shell
 serviceGUID="$(printf "open\nget State:/Network/Global/IPv4\nd.show" | /usr/sbin/scutil | /usr/bin/awk '/PrimaryService/{print $3}')"
