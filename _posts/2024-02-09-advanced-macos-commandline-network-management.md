@@ -34,7 +34,7 @@ Will come back with: "There aren't any DNS Servers set on \<serviceName\>"
 Which is hardly useful ! So, we can proceed with the following:
 
 ```shell
-$currDNS=$(/usr/sbin/networksetup -getdnsservers "serviceName")
+declare currDNS=($(/usr/sbin/networksetup -getdnsservers "serviceName"))
 
 if [[ ${currDNS[0]} == "There" ]]; then
   declare currDNS=($(ipconfig getsummary $activeIF | awk -v FS="({|, |})" '/domain_name_server/ {$1=""; print $0 }'))
