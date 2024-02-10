@@ -1,6 +1,6 @@
 ## macOS and the continuing saga of softwareupdate (software update) being "frozen" or not working, no updates listed
 
-There is a well-known issue with macOS in which a Mac does not show available software updates. This has been occurring since the time of macOS Big Sur - aka ["macOS '(this one) goes to' 11"](https://www.youtube.com/watch?v=KOO5S4vxi0o){:target="_blank" rel="noopener"}
+There is a well-known issue with macOS in which a Mac does not show available software updates. This has been occurring since the time of macOS Big Sur - aka ["macOS '(this one) goes to' 11"](https://www.youtube.com/watch?v=KOO5S4vxi0o)
 
 ---
 
