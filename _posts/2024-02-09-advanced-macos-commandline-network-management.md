@@ -1,6 +1,6 @@
 ## macOS and advanced network commands for managing DNS settings
 
-While MDM is unequivocally a must for managing macOS at (really any) scale, there are times when the core capabilities of MDM won't meed our needs, and a custom scripted approach is needed.
+While MDM is unequivocally a must for managing macOS at (really any) scale, there are times when the core capabilities of MDM won't meed our needs, and a custom scripted approach is required.
 
 ### Commands for determining the active network interface and working with DNS server settings:
 
@@ -20,7 +20,7 @@ activeIF=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}')
 serviceName=$(networksetup -listnetworkserviceorder | grep "$activeIF" | awk -v FS="(Hardware Port: |,)" '{print $2}')
 
 ```
-#### The problem with cataloging existing DNS servers, when they are supplied via DNS
+#### The problem with cataloging existing DNS servers, when they are supplied via DHCP
 
 When DNS servers are provisioned via DHCP, a common approach for determining the IP addresses for said servers will fail:
 
