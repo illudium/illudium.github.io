@@ -1,6 +1,6 @@
 ## macOS and advanced network commands for managing DNS settings
 
-While MDM is unequivocally a must for managing macOS at (really any) scale, there are times when the core capabilities of MDM won't meed our needs, and a custom scripted approach is required.
+While MDM is unequivocally a must for managing macOS at (really any) scale, there are times when the core capabilities of MDM won't meet our needs, and a custom scripted approach is required.
 
 ### Commands for determining the active network interface and working with DNS server settings:
 
