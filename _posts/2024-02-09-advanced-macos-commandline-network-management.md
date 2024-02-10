@@ -22,14 +22,13 @@ serviceName=$(networksetup -listnetworkserviceorder | grep "$activeIF" | awk -v 
 ```
 #### The problem with cataloging existing DNS servers, when they are supplied via DNS
 
-When the DNS servers are provided via DHCP, a problem with the common approach for getting that info,
-will fail:
+When DNS servers are provisioned via DHCP, a common approach for determining the IP addresses for said servers will fail:
 
 ```shell
 /usr/sbin/networksetup -getdnsservers "serviceName"
 ```
 
-Will come back with: "There aren't any DNS Servers set on \<serviceName\>"
+Returns with incorrect info: "There aren't any DNS Servers set on \<serviceName\>"
 
 Which is hardly useful ! So, we can proceed with the following:
 
