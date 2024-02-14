@@ -34,9 +34,9 @@ Which is hardly useful ! So, we can proceed with the following:
 
 For utility and extra [tech-type fun, let's use an array !](https://www.google.com/search?q=shell+scripting+using+an+array) 
 ```shell
-declare currDNS=($(/usr/sbin/networksetup -getdnsservers "serviceName"))
+currDNS=($(/usr/sbin/networksetup -getdnsservers "$serviceName"))
 
-if [[ ${currDNS[0]} == "There" ]]; then
+if [[ ${currDNS[1]} == "There" ]]; then
   declare currDNS=($(ipconfig getsummary $activeIF | awk -v FS="({|, |})" '/domain_name_server/ {$1=""; print $0 }'))
 fi
 
