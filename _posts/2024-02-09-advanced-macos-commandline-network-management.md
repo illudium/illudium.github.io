@@ -25,7 +25,7 @@ serviceName=$(networksetup -listnetworkserviceorder | grep "$activeIF" | awk -v 
 When DNS servers are provisioned via DHCP, a common approach for determining the IP addresses for said servers will fail:
 
 ```shell
-/usr/sbin/networksetup -getdnsservers "serviceName"
+/usr/sbin/networksetup -getdnsservers "$serviceName"
 ```
 
 Returns with incorrect info: "There aren't any DNS Servers set on \<serviceName\>"
