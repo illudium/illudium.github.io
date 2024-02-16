@@ -36,18 +36,18 @@ For utility and extra [tech-type fun, let's use an array !](https://www.google.c
 ```shell
 currDNS=($(/usr/sbin/networksetup -getdnsservers "$serviceName"))
 
-if [[ ${currDNS[1]} == "There" ]]; then
+if [[ ${currDNS[0]} == "There" ]]; then
   declare currDNS=($(ipconfig getsummary $activeIF | awk -v FS="({|, |})" '/domain_name_server/ {$1=""; print $0 }'))
 fi
 
 # check the array, via 
 # declare -p currDNS
 # For an example of working with the captured info:
-# echo ${currDNS[1]}
+# echo ${currDNS[0]}
 
 # So now you can capture those existing DNS servers and append another
 
-/usr/sbin/networksetup -setdnsservers "$serviceName" ${currDNS[1]} ${currDNS[2]} 8.8.8.8
+/usr/sbin/networksetup -setdnsservers "$serviceName" ${currDNS[0]} ${currDNS[1]} 8.8.8.8
 ```
 
 #### Originally published by me, Feb 9th, 2024
