@@ -37,7 +37,7 @@ For utility and extra [tech-type fun, let's use an array !](https://www.google.c
 currDNS=($(/usr/sbin/networksetup -getdnsservers "$serviceName"))
 
 if [[ ${currDNS[0]} == "There" ]]; then
-  declare currDNS=($(ipconfig getsummary $activeIF | awk -v FS="({|, |})" '/domain_name_server/ {$1=""; print $0 }'))
+  currDNS=($(ipconfig getsummary $activeIF | awk -v FS="({|, |})" '/domain_name_server/ {$1=""; print $0 }'))
 fi
 
 # check the array, via 
