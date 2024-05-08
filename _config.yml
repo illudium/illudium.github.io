@@ -1,13 +1,19 @@
 title: "Topically Ephemeral IT insights"
 author: "David Haines"
-description: "I'm starting with migrating over some things I had originally posted elsewhere." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+description: I'm starting with migrating over some things I had originally posted elsewhere.
 
+
+# This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+
+header_images:
+
+#background-image: url('{{ site.baseurl }}/images/coffee-good-today.jpeg')
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
-email: ""
-twitter_username: ""
+#email: ""
+#twitter_username: ""
 github_username: "illudium"
-linkedin_username: ""
+#linkedin_username: ""
 #facebook_username: username
 #flickr_username: username
 #instagram_username: username
