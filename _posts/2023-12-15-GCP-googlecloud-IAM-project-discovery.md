@@ -4,13 +4,13 @@ Pulling GCP IAM information typically means dealing with how GCP effectively use
 
 Start by listing all projects in the root folder of an organization in GCP:
 
-```gcloud shell
+```gcloud
 gcloud alpha projects search --query="parent.id=<tenant_ID_Here"
 ```
 
 AND
 
-```gcloud shell
+```gcloud
 gcloud projects list --filter 'parent.id=<id_here> AND parent.type=organization' | awk '{print $1 }' > projects.txt
 ```
 
