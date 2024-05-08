@@ -1,4 +1,4 @@
-## Microsoft Entra (Azure) discovery:
+## Microsoft Entra (Azure) discovery
 
 When you face (are tasked with) Azure/Entra discovery or cataloging, and want to work in an efficient manner, be sure to use the following:
 
