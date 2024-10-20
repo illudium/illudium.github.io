@@ -12,7 +12,7 @@ https://github.com/jmahlman/Mac-Admin-Scripts/blob/master/Adobe-RUMWithProgress-
 
 One problem you will encounter with RUM, is that it will download available updates but fail to apply them, when an Adobe app is still running.
 
-To handle that gracefully, I suggest the following script snippet [(also listed here)] (https://github.com/illudium/shell-scripts-for-Mac-mgmt/blob/main/quit_all_adobe_apps.sh), which will invoke AppleScript and ask the user quit all running Adobe apps, and prompt them to save any unsaved changes.
+To handle that gracefully, I suggest the following script snippet [(also listed here)](https://github.com/illudium/shell-scripts-for-Mac-mgmt/blob/main/quit_all_adobe_apps.sh), which will invoke AppleScript and ask the user quit all running Adobe apps, and prompt them to save any unsaved changes.
 
 ```shell
 #!/bin/sh
