@@ -5,7 +5,7 @@ Original Publication Date: 2024-10-20
 
 ## Managing Adobe updates remotely via Jamf or other MDM
 
-Adobe provides their Remote Update Manager tool, which [you can read more about from Adobe] (https://helpx.adobe.com/enterprise/using/using-remote-update-manager.html)
+Adobe provides their Remote Update Manager tool, which [you can read more about from Adobe](https://helpx.adobe.com/enterprise/using/using-remote-update-manager.html)
 
 There is an excellent script for using Adobe RUM via Jamf, from John Mahlman, here:
 https://github.com/jmahlman/Mac-Admin-Scripts/blob/master/Adobe-RUMWithProgress-jamfhelper.sh
