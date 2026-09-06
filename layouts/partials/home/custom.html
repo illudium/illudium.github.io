@@ -1,0 +1,89 @@
+<section class="ie-hero" style="background-image: url('{{ (.Param "heroImage") | relURL }}');">
+  <div class="ie-hero-overlay">
+    <div class="ie-hero-content">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.heroTagline }}<p>{{ . }}</p>{{ end }}
+      <a href="#recent-posts" class="ie-scroll-cue" aria-label="Scroll to posts">
+        Continue<span class="ie-scroll-arrow">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="recent-posts">
+  {{ partial "recent-articles/main.html" . }}
+</div>
+
+<style>
+  html { scroll-behavior: smooth; }
+
+  .ie-hero {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* background-attachment: fixed is unreliable on iOS Safari — fall back to scroll */
+  @supports (-webkit-touch-callout: none) {
+    .ie-hero { background-attachment: scroll; }
+  }
+
+  .ie-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ie-hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    max-width: 40rem;
+  }
+
+  .ie-hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  }
+
+  .ie-hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+  }
+
+  .ie-scroll-cue {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+
+  .ie-scroll-cue:hover { opacity: 1; }
+
+  .ie-scroll-arrow {
+    display: block;
+    margin-top: 0.5rem;
+    animation: ie-bounce 1.8s infinite;
+  }
+
+  @keyframes ie-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+</style>

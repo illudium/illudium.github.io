@@ -1,0 +1,7 @@
+baseURL = 'https://illudium.github.io/'
+locale = 'en-us'
+title = 'Topically Ephemeral IT insights'
+
+[module]
+  [[module.imports]]
+    path = "github.com/nunocoracao/blowfish/v3"
