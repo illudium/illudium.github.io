@@ -1,6 +1,6 @@
 ---
 title: "GCP (Google Cloud) IAP"
-date: 2024-03-15T00:00:00
+date: 2026-09-07T00:00:00
 draft: false
 ---
 ## IAP in Google Cloud
