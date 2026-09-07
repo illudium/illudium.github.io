@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.164.0
+      DART_SASS_VERSION: 1.79.4
     steps:
       - name: Install Hugo CLI
         run: |
@@ -33,13 +34,24 @@ jobs:
             && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Install Dart Sass
-        run: sudo snap install dart-sass
+        run: |
+          curl -sLJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          tar -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          echo "$(pwd)/dart-sass" >> "${GITHUB_PATH}"
 
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
+          fetch-depth: 1
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: /tmp/hugo_cache
+          key: hugo-modules-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            hugo-modules-
 
       - name: Setup Pages
         id: pages
@@ -49,6 +61,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
           hugo \
             --minify \
