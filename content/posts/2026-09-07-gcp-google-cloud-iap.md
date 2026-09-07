@@ -45,4 +45,4 @@ so we'd be looking at https://docs.cloud.google.com/run/docs/securing/identity-a
 
 
 In a very welcome move, Google has also simplified configuring access for external users. 
-See https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#console_2
+See https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#outside-org
