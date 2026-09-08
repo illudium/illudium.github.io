@@ -13,7 +13,13 @@ The landing page for IAP documentation is here, [**https://cloud.google.com/secu
 
 Noteworthy highlights being:
 
-> ***Centralized access control\***
+> ***Centralized access control***
+> IAP provides a single point of control >for managing user access to web >applications and cloud resources.
+> 
+>**Works with cloud and on-premises apps**
+>IAP can protect access to applications >hosted on Google Cloud, other clouds, >and on-premises.
+>**Protects apps and VMs**
+>With TCP forwarding, IAP can protect SSH >and RDP access to your VMs hosted on >Google Cloud. Your VM instances don't >even need public IP addresses.
 
 When it comes to using IAP with CloudRun - for some time - setup was slightly more convoluted than one might hope for. Entirely doable, but this was recently simplified.
 
