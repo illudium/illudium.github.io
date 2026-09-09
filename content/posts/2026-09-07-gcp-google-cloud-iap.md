@@ -13,14 +13,34 @@ The landing page for IAP documentation is here, [**https://cloud.google.com/secu
 
 Noteworthy highlights being:
 
-> ***Centralized access control\***
+> #### Centralized access control
+>
+> IAP provides a single point of control for managing user access to web applications and cloud resources.
+>
+> #### Works with cloud and on-premises apps
+>
+> IAP can protect access to applications hosted on Google Cloud, other clouds, and on-premises.
+>
+> #### Protects apps and VMs
+>
+> With [TCP forwarding](https://cloud.google.com/iap/docs/tcp-forwarding-overview/), IAP can protect SSH and RDP access to your VMs hosted on Google Cloud. Your VM instances don't even need public IP addresses.
 
 When it comes to using IAP with CloudRun - for some time - setup was slightly more convoluted than one might hope for. Entirely doable, but this was recently simplified.
 
+See https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#console
+
 In a nutshell:
 
-> ***In the Google Cloud console, go to Cloud RunSelect Services from the Cloud Run navigation menu.If you are configuring a new service, click Deploy container and fill out the initial service settings.If you are configuring an existing service, click the service, then click the Security\*** [***tab.Select\***](http://tab.select/) ***Require authentication, then select Identity-Aware Proxy (IAP).Optional: To grant access to users, follow the instructions to\*** [***Manage user or group access\***](https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#manage-access) ***for IAP. If you encounter issues when configuring access for users outside of your organization, see the\*** [***Troubleshooting\***](https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#troubleshooting) ***section. To save the configuration, click\*** [***Save.Click\***](http://save.click/) ***Create for a new service. Click View diff & redeploy, then Deploy changes for an existing service.\***
+> 1. In the Google Cloud console, go to Cloud Run
+> 2. Select **Services** from the Cloud Run navigation menu.
+> 3. If you are configuring a new service, click **Deploy container** and fill out the initial service settings.
+> 4. If you are configuring an existing service, click the service, then click the **Security** tab.
+> 5. Select **Require authentication**, then select **Identity-Aware Proxy (IAP)**.
+> 6. Optional: To grant access to users, follow the instructions to [Manage user or group access](https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#manage-access) for IAP. If you encounter issues when configuring access for users outside of your organization, see the [Troubleshooting](https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#troubleshooting) section. To save the configuration, click **Save**.
+> 7. Click **Create** for a new service. Click **View diff & redeploy**, then **Deploy changes** for an existing service.
 
 However - for my part -  I’ll normally always be working with such matters programmatically whenever possible, so we’d be looking at [**https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#gcloud**](https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#gcloud)
 
-In a very welcome move, Google has also simplified configuring access for external users. See [**https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#console_2**](https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#console_2)
+In a very welcome move, Google has also simplified configuring access for external users. 
+
+See https://docs.cloud.google.com/run/docs/securing/identity-aware-proxy-cloud-run#outside-org
